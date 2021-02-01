@@ -1,0 +1,17 @@
+<div class="main">
+  <div class="col-12 title">
+    <h1>Stocks</h1>
+  </div>
+
+  <form [formGroup]="stocksForm">
+    <div class="form-group">
+      <label for="stock-search">Stocks</label>
+      <input
+        id="stock-search"
+        type="text"
+        class="form-control"
+        formControlName="stock"
+      />
+    </div>
+  </form>
+</div>
