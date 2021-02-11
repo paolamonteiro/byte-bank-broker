@@ -6,9 +6,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class StocksService {
+  public API_URL = 'http://localhost:3000';
+
   constructor(private httpClient: HttpClient) {}
 
   getStocks() {
-    return this.httpClient.get<Stock[]>('http://localhost:3000/stocks');
+    return this.httpClient.get<Stock[]>(`${this.API_URL}/stocks`);
   }
 }

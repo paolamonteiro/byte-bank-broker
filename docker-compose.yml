@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  node-server-container:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    command: npm start
+    volumes:
+      - ./server:/app
+    ports:
+      - '3000:3000'
+  web-app-container:
+    build:
+      context: ./byte-bank-broker
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./byte-bank-broker:/app
+    ports:
+      - '4200:4200'
+    depends_on:
+      - node-server-container
