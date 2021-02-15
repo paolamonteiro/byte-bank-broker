@@ -2,7 +2,7 @@
   "name": "byte-bank-broker",
   "version": "0.0.0",
   "scripts": {
-    "start": "ng serve",
+    "start": "ng serve --aot --watch --host 0.0.0.0 --poll 1000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,7 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.0.0",
-    "@angular/cdk": "~11.1.0-sha-7643a3cb1",
+    "@angular/cdk": "^11.1.2",
     "@angular/common": "~11.0.0",
     "@angular/compiler": "~11.0.0",
     "@angular/core": "~11.0.0",
@@ -22,11 +22,9 @@
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
     "@ng-bootstrap/ng-bootstrap": "^9.0.2",
-    "angular2-materialize-v1": "^1.0.6",
     "bootstrap": "^4.5.0",
-    "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
+    "tslib": "^2.1.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
